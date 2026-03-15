@@ -1,0 +1,18 @@
+#include <Servo.h>
+Servo myservo;
+int potensiometr = A0;
+int potensiometrqiymati;
+int burish;
+void setup() {
+  // put your setup code here, to run once:
+  myservo.attach(2);
+  
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+potensiometrqiymati = analogRead(potensiometr);
+burish = map(potensiometrqiymati, 0, 1023, 0, 180);
+myservo.write(burish);
+}
