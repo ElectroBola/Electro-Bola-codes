@@ -1,0 +1,16 @@
+int a;
+float b;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(A0, INPUT);
+  pinMode(6, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  a = analogRead(A0);
+  b = a / 5.6;
+  analogWrite(6,b);
+
+}
